@@ -1,0 +1,53 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffeb3b; /* Fondo amarillo claro */
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.container h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 80px;
+    background-color: white; /* Franja de color blanco */
+    padding: 10px; /* Espaciado alrededor del texto */
+    display: inline-block; /* Para ajustar el ancho al contenido */
+}
+
+.bubble {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/ECMAScript_logo.svg/512px-ECMAScript_logo.svg.png');
+    background-size: cover;
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-300px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
